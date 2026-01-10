@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by XML-WS Runtime (https://github.com/eclipse-ee4j/metro-jax-ws). Runtime's version is Eclipse Metro/4.0.4 (RELEASE-4.0.4-ec440d5; 2024-06-28T10:09:00+0000) XMLWS-Impl/4.0.3 XMLWS-API/4.0.2 XMLB-Impl/4.0.5 XMLB-API/4.0.2 git-revision#ec440d5. --><xs:schema xmlns:tns="http://vino/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://vino/">
+
+<xs:element name="aggiornaVino" type="tns:aggiornaVino"/>
+
+<xs:element name="aggiornaVinoResponse" type="tns:aggiornaVinoResponse"/>
+
+<xs:element name="cercaChampagne" type="tns:cercaChampagne"/>
+
+<xs:element name="cercaChampagneResponse" type="tns:cercaChampagneResponse"/>
+
+<xs:element name="cercaPerID" type="tns:cercaPerID"/>
+
+<xs:element name="cercaPerIDResponse" type="tns:cercaPerIDResponse"/>
+
+<xs:element name="cercaPerPrezzo" type="tns:cercaPerPrezzo"/>
+
+<xs:element name="cercaPerPrezzoResponse" type="tns:cercaPerPrezzoResponse"/>
+
+<xs:element name="cercaPerProvenienza" type="tns:cercaPerProvenienza"/>
+
+<xs:element name="cercaPerProvenienzaResponse" type="tns:cercaPerProvenienzaResponse"/>
+
+<xs:element name="cercaTutti" type="tns:cercaTutti"/>
+
+<xs:element name="cercaTuttiResponse" type="tns:cercaTuttiResponse"/>
+
+<xs:element name="creaVino" type="tns:creaVino"/>
+
+<xs:element name="creaVinoResponse" type="tns:creaVinoResponse"/>
+
+<xs:element name="eliminaVino" type="tns:eliminaVino"/>
+
+<xs:element name="eliminaVinoResponse" type="tns:eliminaVinoResponse"/>
+
+<xs:complexType name="cercaTutti">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="cercaTuttiResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:vino" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="vino">
+<xs:sequence>
+<xs:element name="acquisto" type="xs:boolean"/>
+<xs:element name="azienda" type="xs:string" minOccurs="0"/>
+<xs:element name="bottiglie_disponibile" type="xs:int"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="nominativo" type="xs:string" minOccurs="0"/>
+<xs:element name="prezzo" type="xs:double"/>
+<xs:element name="provenienza" type="xs:string" minOccurs="0"/>
+<xs:element name="tipologia" type="xs:string" minOccurs="0"/>
+<xs:element name="vitigno" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cercaPerID">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cercaPerIDResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:vino" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cercaPerProvenienza">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cercaPerProvenienzaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:vino" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cercaPerPrezzo">
+<xs:sequence>
+<xs:element name="arg0" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cercaPerPrezzoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:vino" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aggiornaVino">
+<xs:sequence>
+<xs:element name="arg0" type="tns:vino" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aggiornaVinoResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="creaVino">
+<xs:sequence>
+<xs:element name="arg0" type="tns:vino" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="creaVinoResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="eliminaVino">
+<xs:sequence>
+<xs:element name="arg0" type="tns:vino" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminaVinoResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="cercaChampagne">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="cercaChampagneResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
