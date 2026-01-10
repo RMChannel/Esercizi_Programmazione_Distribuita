@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by XML-WS Runtime (https://github.com/eclipse-ee4j/metro-jax-ws). Runtime's version is Eclipse Metro/4.0.4 (RELEASE-4.0.4-ec440d5; 2024-06-28T10:09:00+0000) XMLWS-Impl/4.0.3 XMLWS-API/4.0.2 XMLB-Impl/4.0.5 XMLB-API/4.0.2 git-revision#ec440d5. --><xs:schema xmlns:tns="http://calcio/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://calcio/">
+
+<xs:element name="aggiornaSquadra" type="tns:aggiornaSquadra"/>
+
+<xs:element name="aggiornaSquadraResponse" type="tns:aggiornaSquadraResponse"/>
+
+<xs:element name="eliminaSquadra" type="tns:eliminaSquadra"/>
+
+<xs:element name="eliminaSquadraResponse" type="tns:eliminaSquadraResponse"/>
+
+<xs:element name="getSquadra" type="tns:getSquadra"/>
+
+<xs:element name="getSquadraResponse" type="tns:getSquadraResponse"/>
+
+<xs:element name="getSquadreByNazione" type="tns:getSquadreByNazione"/>
+
+<xs:element name="getSquadreByNazioneResponse" type="tns:getSquadreByNazioneResponse"/>
+
+<xs:element name="salvaSquadra" type="tns:salvaSquadra"/>
+
+<xs:element name="salvaSquadraResponse" type="tns:salvaSquadraResponse"/>
+
+<xs:element name="squadraConAttaccoMiglioreDi" type="tns:squadraConAttaccoMiglioreDi"/>
+
+<xs:element name="squadraConAttaccoMiglioreDiResponse" type="tns:squadraConAttaccoMiglioreDiResponse"/>
+
+<xs:element name="squadraMigliore" type="tns:squadraMigliore"/>
+
+<xs:element name="squadraMiglioreResponse" type="tns:squadraMiglioreResponse"/>
+
+<xs:complexType name="salvaSquadra">
+<xs:sequence>
+<xs:element name="arg0" type="tns:squadra" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="squadra">
+<xs:sequence>
+<xs:element name="attacco" type="xs:double"/>
+<xs:element name="difesa" type="xs:double"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="indice" type="xs:double"/>
+<xs:element name="lega" type="xs:string" minOccurs="0"/>
+<xs:element name="nazione" type="xs:string" minOccurs="0"/>
+<xs:element name="nome" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="salvaSquadraResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="squadraConAttaccoMiglioreDi">
+<xs:sequence>
+<xs:element name="arg0" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="squadraConAttaccoMiglioreDiResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:squadra" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSquadreByNazione">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSquadreByNazioneResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminaSquadra">
+<xs:sequence>
+<xs:element name="arg0" type="tns:squadra" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminaSquadraResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="squadraMigliore">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+<xs:element name="arg1" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="squadraMiglioreResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:squadra" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aggiornaSquadra">
+<xs:sequence>
+<xs:element name="arg0" type="tns:squadra" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aggiornaSquadraResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getSquadra">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSquadraResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:squadra" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
