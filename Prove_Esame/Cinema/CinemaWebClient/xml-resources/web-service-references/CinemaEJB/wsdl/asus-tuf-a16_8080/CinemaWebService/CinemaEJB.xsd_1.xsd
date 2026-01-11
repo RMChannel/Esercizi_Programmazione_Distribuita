@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by XML-WS Runtime (https://github.com/eclipse-ee4j/metro-jax-ws). Runtime's version is Eclipse Metro/4.0.4 (RELEASE-4.0.4-ec440d5; 2024-06-28T10:09:00+0000) XMLWS-Impl/4.0.3 XMLWS-API/4.0.2 XMLB-Impl/4.0.5 XMLB-API/4.0.2 git-revision#ec440d5. --><xs:schema xmlns:tns="http://cinema/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://cinema/">
+
+<xs:element name="aggiornaFilm" type="tns:aggiornaFilm"/>
+
+<xs:element name="aggiornaFilmResponse" type="tns:aggiornaFilmResponse"/>
+
+<xs:element name="cancellaFilm" type="tns:cancellaFilm"/>
+
+<xs:element name="cancellaFilmResponse" type="tns:cancellaFilmResponse"/>
+
+<xs:element name="cercaPerAnno" type="tns:cercaPerAnno"/>
+
+<xs:element name="cercaPerAnnoResponse" type="tns:cercaPerAnnoResponse"/>
+
+<xs:element name="cercaPerRating" type="tns:cercaPerRating"/>
+
+<xs:element name="cercaPerRatingResponse" type="tns:cercaPerRatingResponse"/>
+
+<xs:element name="filmConRatingMaggioreDi8" type="tns:filmConRatingMaggioreDi8"/>
+
+<xs:element name="filmConRatingMaggioreDi8Response" type="tns:filmConRatingMaggioreDi8Response"/>
+
+<xs:element name="findByID" type="tns:findByID"/>
+
+<xs:element name="findByIDResponse" type="tns:findByIDResponse"/>
+
+<xs:element name="salvaFilm" type="tns:salvaFilm"/>
+
+<xs:element name="salvaFilmResponse" type="tns:salvaFilmResponse"/>
+
+<xs:complexType name="aggiornaFilm">
+<xs:sequence>
+<xs:element name="arg0" type="tns:film" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="film">
+<xs:sequence>
+<xs:element name="anno" type="xs:int"/>
+<xs:element name="genere" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="rating" type="xs:float"/>
+<xs:element name="regista" type="xs:string" minOccurs="0"/>
+<xs:element name="titolo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aggiornaFilmResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="findByID">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findByIDResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:film" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cercaPerAnno">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+<xs:element name="arg1" type="xs:int"/>
+<xs:element name="arg2" type="xs:float"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cercaPerAnnoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:film" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cercaPerRating">
+<xs:sequence>
+<xs:element name="arg0" type="xs:float"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cercaPerRatingResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:film" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="salvaFilm">
+<xs:sequence>
+<xs:element name="arg0" type="tns:film" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="salvaFilmResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="cancellaFilm">
+<xs:sequence>
+<xs:element name="arg0" type="tns:film" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cancellaFilmResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="filmConRatingMaggioreDi8">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="filmConRatingMaggioreDi8Response">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
