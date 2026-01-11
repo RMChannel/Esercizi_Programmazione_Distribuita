@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by XML-WS Runtime (https://github.com/eclipse-ee4j/metro-jax-ws). Runtime's version is Eclipse Metro/4.0.4 (RELEASE-4.0.4-ec440d5; 2024-06-28T10:09:00+0000) XMLWS-Impl/4.0.3 XMLWS-API/4.0.2 XMLB-Impl/4.0.5 XMLB-API/4.0.2 git-revision#ec440d5. --><xs:schema xmlns:tns="http://agenzia/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://agenzia/">
+
+<xs:element name="aggiornaCasa" type="tns:aggiornaCasa"/>
+
+<xs:element name="aggiornaCasaResponse" type="tns:aggiornaCasaResponse"/>
+
+<xs:element name="cercaCaseLibere" type="tns:cercaCaseLibere"/>
+
+<xs:element name="cercaCaseLibereResponse" type="tns:cercaCaseLibereResponse"/>
+
+<xs:element name="cercaPerAffitto" type="tns:cercaPerAffitto"/>
+
+<xs:element name="cercaPerAffittoCompresoAndCap" type="tns:cercaPerAffittoCompresoAndCap"/>
+
+<xs:element name="cercaPerAffittoCompresoAndCapResponse" type="tns:cercaPerAffittoCompresoAndCapResponse"/>
+
+<xs:element name="cercaPerAffittoResponse" type="tns:cercaPerAffittoResponse"/>
+
+<xs:element name="cercaTutti" type="tns:cercaTutti"/>
+
+<xs:element name="cercaTuttiResponse" type="tns:cercaTuttiResponse"/>
+
+<xs:element name="findByID" type="tns:findByID"/>
+
+<xs:element name="findByIDResponse" type="tns:findByIDResponse"/>
+
+<xs:element name="rimuoviCasa" type="tns:rimuoviCasa"/>
+
+<xs:element name="rimuoviCasaResponse" type="tns:rimuoviCasaResponse"/>
+
+<xs:element name="salvaCasa" type="tns:salvaCasa"/>
+
+<xs:element name="salvaCasaResponse" type="tns:salvaCasaResponse"/>
+
+<xs:complexType name="rimuoviCasa">
+<xs:sequence>
+<xs:element name="arg0" type="tns:casa" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="casa">
+<xs:sequence>
+<xs:element name="cap" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="indirizzo" type="xs:string" minOccurs="0"/>
+<xs:element name="prezzoAffitto" type="xs:double"/>
+<xs:element name="stato" type="xs:string" minOccurs="0"/>
+<xs:element name="tipologia" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="rimuoviCasaResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="cercaCaseLibere">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="cercaCaseLibereResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="salvaCasa">
+<xs:sequence>
+<xs:element name="arg0" type="tns:casa" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="salvaCasaResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="findByID">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findByIDResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:casa" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cercaPerAffitto">
+<xs:sequence>
+<xs:element name="arg0" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cercaPerAffittoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:casa" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aggiornaCasa">
+<xs:sequence>
+<xs:element name="arg0" type="tns:casa" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aggiornaCasaResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="cercaPerAffittoCompresoAndCap">
+<xs:sequence>
+<xs:element name="arg0" type="xs:double"/>
+<xs:element name="arg1" type="xs:double"/>
+<xs:element name="arg2" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cercaPerAffittoCompresoAndCapResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:casa" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cercaTutti">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="cercaTuttiResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:casa" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
