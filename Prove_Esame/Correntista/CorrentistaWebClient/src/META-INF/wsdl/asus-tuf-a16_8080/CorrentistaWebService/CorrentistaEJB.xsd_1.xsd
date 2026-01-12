@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by XML-WS Runtime (https://github.com/eclipse-ee4j/metro-jax-ws). Runtime's version is Eclipse Metro/4.0.4 (RELEASE-4.0.4-ec440d5; 2024-06-28T10:09:00+0000) XMLWS-Impl/4.0.3 XMLWS-API/4.0.2 XMLB-Impl/4.0.5 XMLB-API/4.0.2 git-revision#ec440d5. --><xs:schema xmlns:tns="http://banca/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://banca/">
+
+<xs:element name="aggiornaCorrentista" type="tns:aggiornaCorrentista"/>
+
+<xs:element name="aggiornaCorrentistaResponse" type="tns:aggiornaCorrentistaResponse"/>
+
+<xs:element name="correntistaConOperazioni" type="tns:correntistaConOperazioni"/>
+
+<xs:element name="correntistaConOperazioniResponse" type="tns:correntistaConOperazioniResponse"/>
+
+<xs:element name="eliminaCorrentista" type="tns:eliminaCorrentista"/>
+
+<xs:element name="eliminaCorrentistaResponse" type="tns:eliminaCorrentistaResponse"/>
+
+<xs:element name="find" type="tns:find"/>
+
+<xs:element name="findResponse" type="tns:findResponse"/>
+
+<xs:element name="getAllCorrentistiConOperazioni" type="tns:getAllCorrentistiConOperazioni"/>
+
+<xs:element name="getAllCorrentistiConOperazioniResponse" type="tns:getAllCorrentistiConOperazioniResponse"/>
+
+<xs:element name="getAllInsolventi" type="tns:getAllInsolventi"/>
+
+<xs:element name="getAllInsolventiResponse" type="tns:getAllInsolventiResponse"/>
+
+<xs:element name="salvaCorrentista" type="tns:salvaCorrentista"/>
+
+<xs:element name="salvaCorrentistaResponse" type="tns:salvaCorrentistaResponse"/>
+
+<xs:element name="transazione" type="tns:transazione"/>
+
+<xs:element name="transazioneResponse" type="tns:transazioneResponse"/>
+
+<xs:complexType name="correntistaConOperazioni">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="correntistaConOperazioniResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="find">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:correntista" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="correntista">
+<xs:sequence>
+<xs:element name="cognome" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="impiego" type="xs:string" minOccurs="0"/>
+<xs:element name="importoIngresso" type="xs:double"/>
+<xs:element name="importoUscita" type="xs:double"/>
+<xs:element name="insolvente" type="xs:boolean"/>
+<xs:element name="nome" type="xs:string" minOccurs="0"/>
+<xs:element name="nBonificiIngresso" type="xs:int"/>
+<xs:element name="nBonificiUscita" type="xs:int"/>
+<xs:element name="nOperazioniTotaliEntrata" type="xs:int"/>
+<xs:element name="nOperazioniTotaliUscita" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aggiornaCorrentista">
+<xs:sequence>
+<xs:element name="arg0" type="tns:correntista" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aggiornaCorrentistaResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="eliminaCorrentista">
+<xs:sequence>
+<xs:element name="arg0" type="tns:correntista" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminaCorrentistaResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getAllInsolventi">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getAllInsolventiResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:correntista" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="salvaCorrentista">
+<xs:sequence>
+<xs:element name="arg0" type="tns:correntista" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="salvaCorrentistaResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getAllCorrentistiConOperazioni">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllCorrentistiConOperazioniResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:correntista" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="transazione">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+<xs:element name="arg1" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="transazioneResponse">
+<xs:sequence/>
+</xs:complexType>
+</xs:schema>
