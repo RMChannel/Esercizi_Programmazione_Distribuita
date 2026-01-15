@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by XML-WS Runtime (https://github.com/eclipse-ee4j/metro-jax-ws). Runtime's version is Eclipse Metro/4.0.4 (RELEASE-4.0.4-ec440d5; 2024-06-28T10:09:00+0000) XMLWS-Impl/4.0.3 XMLWS-API/4.0.2 XMLB-Impl/4.0.5 XMLB-API/4.0.2 git-revision#ec440d5. --><xs:schema xmlns:tns="http://bici/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://bici/">
+
+<xs:element name="getNomi" type="tns:getNomi"/>
+
+<xs:element name="getNomiResponse" type="tns:getNomiResponse"/>
+
+<xs:complexType name="getNomi">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getNomiResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:biciWebMsg" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="biciWebMsg">
+<xs:sequence>
+<xs:element name="cambio" type="xs:string" minOccurs="0"/>
+<xs:element name="nome" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

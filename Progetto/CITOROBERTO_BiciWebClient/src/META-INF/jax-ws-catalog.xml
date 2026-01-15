@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="file:/C:/Users/Roberto/Desktop/BiciEJB.xml" uri="wsdl/BiciEJB.xml.wsdl"/>
+    <system systemId="http://asus-tuf-a16:8080/BiciWebService/BiciEJB?xsd=1" uri="wsdl/asus-tuf-a16_8080/BiciWebService/BiciEJB.xsd_1.xsd"/>
+</catalog>
