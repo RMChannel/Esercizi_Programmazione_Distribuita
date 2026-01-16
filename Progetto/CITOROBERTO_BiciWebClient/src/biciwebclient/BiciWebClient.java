@@ -24,6 +24,7 @@ public class BiciWebClient {
         stampaMessaggio(ejb,100);
     }
     
+    // MODIFICA: Metodo aggiunto per stampare BiciWebMsg
     public static void stampaMessaggio(BiciEJB ejb, int id) {
         BiciWebMsg msg=ejb.getNomi(id);
         System.out.println("ID: "+id+" Nome: "+msg.getNome()+" Cambio: "+msg.getCambio());

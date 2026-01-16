@@ -17,6 +17,7 @@ import jakarta.inject.Inject;
  *
  * @author Roberto
  */
+// MODIFICA: Aggiunto DataSourceDefinition
 @DataSourceDefinition(
         className = "org.apache.derby.jdbc.ClientDataSource",
         name = "jdbc/EsameDS",

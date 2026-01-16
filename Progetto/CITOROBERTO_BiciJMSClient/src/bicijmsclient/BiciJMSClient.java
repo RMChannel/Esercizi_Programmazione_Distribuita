@@ -16,6 +16,7 @@ import javax.naming.NamingException;
  *
  * @author Roberto
  */
+// MODIFICA: Classe aggiunta per richiesta B.3
 public class BiciJMSClient {
     public static void main(String[] args) throws NamingException {
         Context ctx=new InitialContext();

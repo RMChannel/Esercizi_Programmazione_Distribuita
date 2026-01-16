@@ -60,6 +60,7 @@ public class BiciEJB implements BiciEJBRemote {
     }
     
     // Implementa la richiesta C: Web Service che restituisce Nome e Cambio dato l'ID
+    // MODIFICA: Restituisce un oggetto BiciWebMsg invece di String
     @WebMethod
     public BiciWebMsg getNomi(int id) {
         BiciWebMsg msg=new BiciWebMsg();

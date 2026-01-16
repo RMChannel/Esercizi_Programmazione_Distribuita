@@ -9,6 +9,7 @@ import java.io.Serializable;
 /**
  * Oggetto di risposta per il Web Service
  * Contiene solo Nome e Cambio della bici.
+ * // MODIFICA: Classe aggiunta per sostituire la stringa nel Web Service
  * @author Roberto
  */
 public class BiciWebMsg implements Serializable {

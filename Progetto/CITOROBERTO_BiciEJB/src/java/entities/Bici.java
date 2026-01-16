@@ -66,6 +66,7 @@ public class Bici implements Serializable {
     }
     
     // Calcola l'eta della bici in anni
+    // MODIFICA: Gestione caso anno non inizializzato
     public int getEta() {
         if(this.anno==0) return 0;
         else return LocalDate.now().getYear()-this.anno;

@@ -14,6 +14,7 @@ import jakarta.persistence.PersistenceContext;
  */
 public class ProducerEM {
     @Produces
+    // MODIFICA: Cambiato nome persistence unit in "EsamePU"
     @PersistenceContext(unitName="EsamePU") // Collega l'EntityManager alla Persistence Unit "EsamePU"
     EntityManager em;
 }
